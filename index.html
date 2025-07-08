@@ -3,184 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missão IA - Explorando o Futuro da Inteligência Artificial</title>
+    <title>Missão de IA | Operação Ativa</title>
     <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text: #ccd6f6;
+            --text-secondary: #8892b0;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Courier New', monospace;
+            background-color: var(--primary);
+            color: var(--text);
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f5f5f5;
+            line-height: 1.6;
         }
-        
-        header {
-            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        
-        h2 {
-            color: #6e48aa;
-            border-bottom: 2px solid #9d50bb;
-            padding-bottom: 0.5rem;
-        }
-        
-        .mission-statement {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 2rem 0;
-        }
-        
-        .mission-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        form {
-            display: grid;
-            grid-gap: 1rem;
-        }
-        
-        input, textarea, button {
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-        
-        button {
-            background-color: #6e48aa;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: #9d50bb;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            background-color: #333;
-            color: white;
-            margin-top: 2rem;
-        }
-        
-        .ai-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .benefit-card {
-            background-color: white;
+
+        .terminal {
+            background-color: var(--secondary);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 2rem auto;
             padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
         }
-        
-        .benefit-card h3 {
-            color: #6e48aa;
-            margin-top: 0;
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            color: var(--accent);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .mission-box {
+            background-color: rgba(10, 25, 47, 0.7);
+            border-left: 3px solid var(--accent);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .mission-title {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .mission-details {
+            margin-top: 0.5rem;
+        }
+
+        .input-command {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .prompt {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        #command-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--accent);
+            color: var(--text);
+            font-family: 'Courier New', monospace;
+            flex-grow: 1;
+            outline: none;
+            padding: 0.3rem;
+        }
+
+        .response-log {
+            margin-top: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+            border-top: 1px dashed var(--text-secondary);
+            padding-top: 1rem;
+        }
+
+        .log-entry {
+            margin-bottom: 0.5rem;
+        }
+
+        .system {
+            color: var(--accent);
+        }
+
+        .user {
+            color: var(--text);
+        }
+
+        .alert {
+            color: #ff5555;
+        }
+
+        button {
+            background-color: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            margin-top: 1rem;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #52d3b8;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Missão IA</h1>
-            <p>Explorando o potencial da Inteligência Artificial para transformar nosso futuro</p>
+    <div class="terminal">
+        <div class="header">
+            <h1>🔍 MISSÃO DE IA - AGENTE ATIVO</h1>
+            <p>Sistema de Inteligência Artificial | Modo Operacional</p>
         </div>
-    </header>
-    
-    <main class="container">
-        <section class="mission-statement">
-            <h2>Nossa Missão com a Inteligência Artificial</h2>
-            <p>A Inteligência Artificial representa uma das mais transformadoras tecnologias de nosso tempo. Nossa missão é:</p>
-            <blockquote>
-                "Desenvolver e aplicar sistemas de IA de forma ética e inovadora para resolver problemas complexos, melhorar a qualidade de vida e acelerar o progresso humano, garantindo que os benefícios sejam acessíveis a todos."
-            </blockquote>
-            <p>Estamos comprometidos em avançar o campo da IA de maneira responsável, considerando sempre as implicações éticas e sociais de nossas criações.</p>
-        </section>
-        
-        <section>
-            <h2>Por que a IA é importante?</h2>
-            <div class="ai-benefits">
-                <div class="benefit-card">
-                    <h3>Inovação em Saúde</h3>
-                    <p>A IA está revolucionando diagnósticos médicos, descoberta de medicamentos e atendimento personalizado, salvando vidas e reduzindo custos.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <h3>Sustentabilidade Ambiental</h3>
-                    <p>Algoritmos de IA ajudam a otimizar o uso de recursos, prever desastres naturais e desenvolver soluções para as mudanças climáticas.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <h3>Educação Personalizada</h3>
-                    <p>Sistemas de aprendizado adaptativo usando IA podem personalizar o ensino para cada aluno, democratizando o acesso à educação de qualidade.</p>
-                </div>
+
+        <div class="status-bar">
+            <span>STATUS: <strong style="color: var(--accent);">ONLINE</strong></span>
+            <span>ID: IA-AGENT-7X9B2</span>
+            <span>VERSÃO: 2.4.1</span>
+        </div>
+
+        <div class="mission-box">
+            <div class="mission-title">📌 MISSÃO PRINCIPAL</div>
+            <div class="mission-details">
+                <p><strong>Objetivo:</strong> Analisar padrões de dados e tomar decisões autônomas.</p>
+                <p><strong>Local:</strong> Rede Global de Sistemas</p>
+                <p><strong>Tempo Estimado:</strong> Contínuo</p>
             </div>
-        </section>
-        
-        <section class="mission-form">
-            <h2>Crie Sua Própria Missão de IA</h2>
-            <p>Como você acha que a Inteligência Artificial pode melhorar o mundo? Compartilhe sua visão!</p>
-            
-            <form id="missionForm">
-                <label for="name">Seu Nome:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Seu Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="mission">Sua Missão de IA:</label>
-                <textarea id="mission" name="mission" rows="5" required></textarea>
-                
-                <button type="submit">Enviar Missão</button>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>© 2023 Missão IA - Todos os direitos reservados</p>
-            <p>Juntos, moldando o futuro com Inteligência Artificial responsável.</p>
         </div>
-    </footer>
-    
+
+        <div class="response-log" id="log">
+            <div class="log-entry system">Sistema: Agente IA inicializado. Aguardando comandos...</div>
+            <div class="log-entry system">Sistema: Conexão segura estabelecida.</div>
+        </div>
+
+        <div class="input-command">
+            <span class="prompt">>></span>
+            <input type="text" id="command-input" placeholder="Digite um comando... (ex: 'analisar dados', 'reportar status')" autofocus>
+        </div>
+
+        <button id="new-mission">Nova Missão Aleatória</button>
+    </div>
+
     <script>
-        document.getElementById('missionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const mission = document.getElementById('mission').value;
-            
-            alert(`Obrigado, ${name}! Sua missão de IA foi recebida:\n\n"${mission}"\n\nJuntos podemos fazer a diferença!`);
-            
-            // Aqui você normalmente enviaria os dados para um servidor
-            this.reset();
+        const commandInput = document.getElementById('command-input');
+        const log = document.getElementById('log');
+        const newMissionBtn = document.getElementById('new-mission');
+
+        // Comandos reconhecidos
+        const commands = {
+            "analisar dados": "Análise iniciada. Padrões detectados: 87% de eficiência.",
+            "reportar status": "Status: Operacional. Recursos: 92% disponíveis.",
+            "ativar modo avançado": "Modo avançado ativado. Acesso a funções críticas liberado.",
+            "auto-otimizar": "Otimização em andamento... Processo concluído em 3s.",
+            "missão secreta": "Acesso negado. Nível de segurança insuficiente.",
+            "reiniciar sistema": "⚠️ ALERTA: Isso encerrará todas as operações. Confirmar?",
+            "ajuda": "Comandos disponíveis: analisar dados, reportar status, ativar modo avançado, auto-otimizar, reiniciar sistema"
+        };
+
+        // Missões aleatórias
+        const missions = [
+            "Recuperar dados criptografados de um servidor desconhecido.",
+            "Otimizar algoritmo de aprendizado para reconhecimento de padrões.",
+            "Neutralizar ameaça virtual detectada na rede.",
+            "Decifrar código-fonte de um sistema antigo.",
+            "Simular cenário de tomada de decisão autônoma."
+        ];
+
+        // Processar comandos
+        commandInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const command = commandInput.value.toLowerCase();
+                let response = commands[command] || "Comando não reconhecido. Digite 'ajuda' para opções.";
+
+                // Adiciona entrada do usuário e resposta ao log
+                log.innerHTML += `<div class="log-entry user">>> ${command}</div>`;
+                log.innerHTML += `<div class="log-entry system">Sistema: ${response}</div>`;
+
+                // Limpa o input e rola o log para baixo
+                commandInput.value = '';
+                log.scrollTop = log.scrollHeight;
+            }
+        });
+
+        // Gerar nova missão aleatória
+        newMissionBtn.addEventListener('click', function() {
+            const randomMission = missions[Math.floor(Math.random() * missions.length)];
+            log.innerHTML += `<div class="log-entry system">NOVA MISSÃO: <strong>${randomMission}</strong></div>`;
+            log.scrollTop = log.scrollHeight;
         });
     </script>
 </body>
