@@ -1,9 +1,9 @@
 :root {
-  --cor-fundo: #2e1d12;
-  --cor-principal: #f4e3c1;
-  --cor-secundaria: #8b5e3c;
-  --cor-destaque: #c69c6d;
-  --cor-texto: #3e1f0d;
+  --cor-fundo: #000000;
+  --cor-principal: #2c2c2c;
+  --cor-secundaria: #8b0000;
+  --cor-destaque: #ff3333;
+  --cor-texto: #f0f0f0;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
-  font-family: 'Georgia', serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .caixa-principal {
@@ -25,7 +25,7 @@ body {
   text-align: center;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 51, 51, 0.2);
 }
 
 h1 {
@@ -36,7 +36,7 @@ h1 {
 
 button {
   background-color: var(--cor-secundaria);
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 12px;
   padding: 15px;
@@ -52,8 +52,8 @@ button {
 
 button:hover {
   background-color: var(--cor-destaque);
-  color: var(--cor-texto);
-  transform: scale(1.03);
+  color: var(--cor-principal);
+  transform: scale(1.05);
 }
 
 .caixa-resultado {
