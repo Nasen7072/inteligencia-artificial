@@ -1,61 +1,66 @@
 :root {
-    --cor-fundo: #01080E;
-    --cor-principal: #0B0D20;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
+  --cor-fundo: #2e1d12;
+  --cor-principal: #f4e3c1;
+  --cor-secundaria: #8b5e3c;
+  --cor-destaque: #c69c6d;
+  --cor-texto: #3e1f0d;
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Georgia', serif;
 }
 
 .caixa-principal {
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  background-color: var(--cor-principal);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 h1 {
-    color: var(--cor-destaque);
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: var(--cor-destaque);
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 10px;
-    width: 90%;
-    max-width: 400px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+  background-color: var(--cor-secundaria);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px auto;
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  transform: scale(1.03);
 }
 
 .caixa-resultado {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .texto-resultado {
-    font-style: italic;
-    line-height: 1.6;
+  font-style: italic;
+  line-height: 1.5;
 }
